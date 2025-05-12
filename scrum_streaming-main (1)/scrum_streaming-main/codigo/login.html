@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineHome - Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  
+
+    <!-- CSS interno -->
+     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono:wght@400;700&display=swap');
+
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #000;
+    }
+    
+    body {
+        background-image: url('../img/foto_filmes.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    
+    /* Imagem de fundo na lateral direita */
+    .bg-filmes-img {
+        background-image: url('../img/foto_fundo.png'); /* Caminho ajustado */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    
+    /* Inputs */
+    .common-input {
+        background-color: #fff;
+        color: #000 !important;
+    }
+    .common-input:focus {
+        background-color: #ffffffdd;
+        color: #000 !important;
+        box-shadow: none;
+    }
+    
+    /* Botão */
+    .btn-danger {
+        background-color: #D22424;
+        border: none;
+        padding: 0.75rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.2s ease;
+    }
+    .btn-danger:hover {
+        background-color: #a71c1c;
+    }
+    
+    /* usuário e senha */
+    .form-label {
+        font-size: 1.2rem; 
+        font-weight: 500;  
+    }
+    
+    
+    /* Responsivo: esconde imagem em telas pequenas */
+    @media (max-width: 767px) {
+        .bg-filmes-img {
+            display: none;
+        }
+    }
+</style>
+    
+    
+</head>
+<body class="d-flex vh-100">
+    <div class="d-flex w-100">
+        <!-- Coluna esquerda: formulário de login -->
+        <div class="col-md-5 d-flex justify-content-center align-items-center text-white p-5">
+            <div class="w-100" style="max-width: 360px; background-color: rgba(0, 0, 0, 0.6); padding: 2rem; border-radius: 12px;">
+                <h1 class="mb-4 text-center" style="letter-spacing: 2px;">LOGIN</h1>
+                <form method="post" action="home_user.html">
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuário</label>
+                        <input type="text" name="user" id="usuario" class="form-control common-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" name="senha" id="senha" class="form-control common-input" required>
+                    </div>
+                    <button class="btn btn-danger w-100" type="submit">ENTRAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Coluna direita com imagem de fundo -->
+        <div class="col-md-7 d-none d-md-block bg-filmes-img"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
